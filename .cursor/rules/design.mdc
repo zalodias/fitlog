@@ -1,0 +1,8 @@
+---
+alwaysApply: true
+---
+
+## Style Guide
+
+- Use Title Case for all layer & component names
+- Do not override the original component name in instances

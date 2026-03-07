@@ -1,0 +1,979 @@
+{
+  "version": "2.8",
+  "children": [
+    {
+      "type": "frame",
+      "id": "bi8Au",
+      "x": 0,
+      "y": 0,
+      "name": "Exercises Library",
+      "clip": true,
+      "width": 390,
+      "fill": "$--color-background-default",
+      "layout": "vertical",
+      "children": [
+        {
+          "type": "frame",
+          "id": "MUHWf",
+          "name": "Content",
+          "width": "fill_container",
+          "layout": "vertical",
+          "gap": 32,
+          "padding": 24,
+          "children": [
+            {
+              "type": "frame",
+              "id": "r5hml",
+              "name": "Header",
+              "width": "fill_container",
+              "layout": "vertical",
+              "gap": 4,
+              "children": [
+                {
+                  "type": "text",
+                  "id": "ASPOU",
+                  "name": "Title",
+                  "fill": "$--color-foreground-default",
+                  "content": "Movements",
+                  "fontFamily": "$--font-family",
+                  "fontSize": 28,
+                  "fontWeight": "600",
+                  "letterSpacing": -0.5
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "gE5TW",
+              "name": "Exercises Card",
+              "clip": true,
+              "width": "fill_container",
+              "stroke": {
+                "align": "inside",
+                "thickness": 1.5
+              },
+              "layout": "vertical",
+              "gap": 16,
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "yg0PL",
+                  "name": "Grid Row 1",
+                  "width": "fill_container",
+                  "gap": 16,
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "28HsH",
+                      "name": "Ex 1",
+                      "width": "fill_container",
+                      "fill": "#f5f5f5ff",
+                      "cornerRadius": 16,
+                      "layout": "vertical",
+                      "gap": 14,
+                      "padding": 16,
+                      "children": [
+                        {
+                          "type": "frame",
+                          "id": "WfW4w",
+                          "name": "Ex 1 Content",
+                          "width": "fill_container",
+                          "layout": "vertical",
+                          "gap": 2,
+                          "children": [
+                            {
+                              "type": "text",
+                              "id": "SC1La",
+                              "name": "Ex 1 Name",
+                              "fill": "$--color-foreground-default",
+                              "textGrowth": "fixed-width",
+                              "width": "fill_container",
+                              "content": "Bench Press",
+                              "fontFamily": "$--font-family",
+                              "fontSize": 15,
+                              "fontWeight": "500"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "frame",
+                          "id": "ftE7p",
+                          "name": "Frame 1",
+                          "gap": 4,
+                          "alignItems": "center",
+                          "children": [
+                            {
+                              "type": "text",
+                              "id": "jsLxL",
+                              "fill": "#000000",
+                              "content": "65",
+                              "lineHeight": 1.2,
+                              "fontFamily": "Inter",
+                              "fontSize": 40,
+                              "fontWeight": "700"
+                            },
+                            {
+                              "type": "text",
+                              "id": "We6oZ",
+                              "fill": "$--color-foreground-muted",
+                              "content": "kg",
+                              "lineHeight": 1.2,
+                              "fontFamily": "Inter",
+                              "fontSize": 16,
+                              "fontWeight": "500"
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "cojon",
+                      "name": "Ex 2",
+                      "width": "fill_container",
+                      "fill": "#f5f5f5ff",
+                      "cornerRadius": 16,
+                      "layout": "vertical",
+                      "gap": 14,
+                      "padding": 16,
+                      "children": [
+                        {
+                          "type": "icon_font",
+                          "id": "V6Q2Y",
+                          "name": "Ex 2 Icon",
+                          "width": 24,
+                          "height": 24,
+                          "iconFontName": "dumbbell",
+                          "iconFontFamily": "lucide",
+                          "fill": "$--color-background-inverse"
+                        },
+                        {
+                          "type": "frame",
+                          "id": "0HtWI",
+                          "name": "Ex 2 Content",
+                          "width": "fill_container",
+                          "layout": "vertical",
+                          "gap": 2,
+                          "children": [
+                            {
+                              "type": "text",
+                              "id": "vT8nP",
+                              "name": "Ex 2 Name",
+                              "fill": "$--color-foreground-default",
+                              "content": "Squat",
+                              "fontFamily": "$--font-family",
+                              "fontSize": 15,
+                              "fontWeight": "500"
+                            },
+                            {
+                              "type": "text",
+                              "id": "Ej2et",
+                              "name": "Ex 2 Meta",
+                              "fill": "$--color-foreground-muted",
+                              "content": "Legs · Barbell",
+                              "fontFamily": "$--font-family",
+                              "fontSize": 13,
+                              "fontWeight": "normal"
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "aoCpM",
+                  "name": "Grid Row 2",
+                  "width": "fill_container",
+                  "gap": 16,
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "V5RFN",
+                      "name": "Ex 3",
+                      "width": "fill_container",
+                      "fill": "#f5f5f5ff",
+                      "cornerRadius": 16,
+                      "layout": "vertical",
+                      "gap": 14,
+                      "padding": 16,
+                      "children": [
+                        {
+                          "type": "icon_font",
+                          "id": "zxlza",
+                          "name": "Ex 3 Icon",
+                          "width": 24,
+                          "height": 24,
+                          "iconFontName": "dumbbell",
+                          "iconFontFamily": "lucide",
+                          "fill": "$--color-background-inverse"
+                        },
+                        {
+                          "type": "frame",
+                          "id": "BIRbL",
+                          "name": "Ex 3 Content",
+                          "width": "fill_container",
+                          "layout": "vertical",
+                          "gap": 2,
+                          "children": [
+                            {
+                              "type": "text",
+                              "id": "i2CQs",
+                              "name": "Ex 3 Name",
+                              "fill": "$--color-foreground-default",
+                              "content": "Deadlift",
+                              "fontFamily": "$--font-family",
+                              "fontSize": 15,
+                              "fontWeight": "500"
+                            },
+                            {
+                              "type": "text",
+                              "id": "ggIp8",
+                              "name": "Ex 3 Meta",
+                              "fill": "$--color-foreground-muted",
+                              "content": "Back · Barbell",
+                              "fontFamily": "$--font-family",
+                              "fontSize": 13,
+                              "fontWeight": "normal"
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "eWtlx",
+                      "name": "Ex 4",
+                      "width": "fill_container",
+                      "fill": "#f5f5f5ff",
+                      "cornerRadius": 16,
+                      "layout": "vertical",
+                      "gap": 14,
+                      "padding": 16,
+                      "children": [
+                        {
+                          "type": "icon_font",
+                          "id": "SAqFU",
+                          "name": "Ex 4 Icon",
+                          "width": 24,
+                          "height": 24,
+                          "iconFontName": "dumbbell",
+                          "iconFontFamily": "lucide",
+                          "fill": "$--color-background-inverse"
+                        },
+                        {
+                          "type": "frame",
+                          "id": "TVQHI",
+                          "name": "Ex 4 Content",
+                          "width": "fill_container",
+                          "layout": "vertical",
+                          "gap": 2,
+                          "children": [
+                            {
+                              "type": "text",
+                              "id": "cNyM9",
+                              "name": "Ex 4 Name",
+                              "fill": "$--color-foreground-default",
+                              "content": "Overhead Press",
+                              "fontFamily": "Inter",
+                              "fontSize": 15,
+                              "fontWeight": "500"
+                            },
+                            {
+                              "type": "text",
+                              "id": "ia33t",
+                              "name": "Ex 4 Meta",
+                              "fill": "$--color-foreground-muted",
+                              "content": "Shoulders · Barbell",
+                              "fontFamily": "Inter",
+                              "fontSize": 13,
+                              "fontWeight": "normal"
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "hC4t6",
+                  "name": "Grid Row 2",
+                  "width": "fill_container",
+                  "gap": 16,
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "Ppuo2",
+                      "name": "Ex 3",
+                      "width": "fill_container",
+                      "fill": "#f5f5f5ff",
+                      "cornerRadius": 16,
+                      "layout": "vertical",
+                      "gap": 14,
+                      "padding": 16,
+                      "children": [
+                        {
+                          "type": "icon_font",
+                          "id": "iwkXP",
+                          "name": "Ex 3 Icon",
+                          "width": 24,
+                          "height": 24,
+                          "iconFontName": "dumbbell",
+                          "iconFontFamily": "lucide",
+                          "fill": "$--color-background-inverse"
+                        },
+                        {
+                          "type": "frame",
+                          "id": "cGjaJ",
+                          "name": "Ex 3 Content",
+                          "width": "fill_container",
+                          "layout": "vertical",
+                          "gap": 2,
+                          "children": [
+                            {
+                              "type": "text",
+                              "id": "lQmSd",
+                              "name": "Ex 3 Name",
+                              "fill": "$--color-foreground-default",
+                              "content": "Deadlift",
+                              "fontFamily": "$--font-family",
+                              "fontSize": 15,
+                              "fontWeight": "500"
+                            },
+                            {
+                              "type": "text",
+                              "id": "UalC9",
+                              "name": "Ex 3 Meta",
+                              "fill": "$--color-foreground-muted",
+                              "content": "Back · Barbell",
+                              "fontFamily": "$--font-family",
+                              "fontSize": 13,
+                              "fontWeight": "normal"
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "MQeg9",
+                      "name": "Ex 4",
+                      "width": "fill_container",
+                      "fill": "#f5f5f5ff",
+                      "cornerRadius": 16,
+                      "layout": "vertical",
+                      "gap": 14,
+                      "padding": 16,
+                      "children": [
+                        {
+                          "type": "icon_font",
+                          "id": "NQXcf",
+                          "name": "Ex 4 Icon",
+                          "width": 24,
+                          "height": 24,
+                          "iconFontName": "dumbbell",
+                          "iconFontFamily": "lucide",
+                          "fill": "$--color-background-inverse"
+                        },
+                        {
+                          "type": "frame",
+                          "id": "pHYyl",
+                          "name": "Ex 4 Content",
+                          "width": "fill_container",
+                          "layout": "vertical",
+                          "gap": 2,
+                          "children": [
+                            {
+                              "type": "text",
+                              "id": "ehHou",
+                              "name": "Ex 4 Name",
+                              "fill": "$--color-foreground-default",
+                              "content": "Overhead Press",
+                              "fontFamily": "Inter",
+                              "fontSize": 15,
+                              "fontWeight": "500"
+                            },
+                            {
+                              "type": "text",
+                              "id": "2KkT4",
+                              "name": "Ex 4 Meta",
+                              "fill": "$--color-foreground-muted",
+                              "content": "Shoulders · Barbell",
+                              "fontFamily": "Inter",
+                              "fontSize": 13,
+                              "fontWeight": "normal"
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "gelh4",
+              "name": "Add Section",
+              "width": "fill_container",
+              "justifyContent": "center",
+              "children": [
+                {
+                  "id": "jW8qo",
+                  "type": "ref",
+                  "ref": "ssW87",
+                  "x": 0,
+                  "context": "",
+                  "width": "fill_container",
+                  "descendants": {
+                    "tqOZX": {
+                      "enabled": false
+                    },
+                    "qyLxv": {
+                      "content": "Add exercise"
+                    }
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "hQyxb",
+          "type": "ref",
+          "ref": "aq9eP",
+          "x": 0,
+          "y": 542,
+          "flipX": false,
+          "flipY": false,
+          "width": "fill_container",
+          "height": "fit_content"
+        }
+      ]
+    },
+    {
+      "type": "frame",
+      "id": "aq9eP",
+      "x": -501,
+      "y": 182,
+      "name": "Bottom Tab Bar",
+      "reusable": true,
+      "width": 360,
+      "fill": "$--color-background-default",
+      "stroke": {
+        "align": "inside",
+        "thickness": 1,
+        "fill": "$--color-border-default"
+      },
+      "padding": [
+        8,
+        16
+      ],
+      "alignItems": "center",
+      "children": [
+        {
+          "type": "frame",
+          "id": "TYhSE",
+          "name": "Tab Home",
+          "width": "fill_container",
+          "layout": "vertical",
+          "gap": 4,
+          "justifyContent": "center",
+          "alignItems": "center",
+          "children": [
+            {
+              "type": "icon_font",
+              "id": "aUQet",
+              "name": "Home Icon",
+              "width": 24,
+              "height": 24,
+              "iconFontName": "house",
+              "iconFontFamily": "lucide",
+              "fill": "$--color-foreground-default"
+            },
+            {
+              "type": "text",
+              "id": "muJ4s",
+              "name": "Home Label",
+              "fill": "$--color-foreground-default",
+              "content": "Home",
+              "fontFamily": "Inter",
+              "fontSize": 12,
+              "fontWeight": "500"
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "ElViE",
+          "name": "Tab Workouts",
+          "width": "fill_container",
+          "layout": "vertical",
+          "gap": 4,
+          "justifyContent": "center",
+          "alignItems": "center",
+          "children": [
+            {
+              "type": "icon_font",
+              "id": "USVnQ",
+              "name": "Workouts Icon",
+              "width": 24,
+              "height": 24,
+              "iconFontName": "panel-right-close",
+              "iconFontFamily": "lucide",
+              "fill": "$--color-foreground-muted"
+            },
+            {
+              "type": "text",
+              "id": "xdtUs",
+              "name": "Workouts Label",
+              "fill": "$--color-foreground-muted",
+              "content": "Workouts",
+              "fontFamily": "Inter",
+              "fontSize": 12,
+              "fontWeight": "500"
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "ZBrcO",
+          "name": "Tab Movements",
+          "width": "fill_container",
+          "layout": "vertical",
+          "gap": 4,
+          "justifyContent": "center",
+          "alignItems": "center",
+          "children": [
+            {
+              "type": "icon_font",
+              "id": "XTnVf",
+              "name": "Movements Icon",
+              "width": 24,
+              "height": 24,
+              "iconFontName": "move-diagonal",
+              "iconFontFamily": "lucide",
+              "fill": "$--color-foreground-muted"
+            },
+            {
+              "type": "text",
+              "id": "BNqW8",
+              "name": "Movements Label",
+              "fill": "$--color-foreground-muted",
+              "content": "Movements",
+              "fontFamily": "Inter",
+              "fontSize": 12,
+              "fontWeight": "500"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "frame",
+      "id": "JcG18",
+      "x": 430,
+      "y": 0,
+      "name": "Workout Session",
+      "clip": true,
+      "width": 390,
+      "fill": "$--color-background-default",
+      "layout": "vertical",
+      "children": [
+        {
+          "type": "frame",
+          "id": "Wl5sw",
+          "name": "Session Content",
+          "width": "fill_container",
+          "layout": "vertical",
+          "gap": 32,
+          "padding": 24,
+          "children": [
+            {
+              "type": "frame",
+              "id": "ee6RG",
+              "name": "Session Header",
+              "width": "fill_container",
+              "layout": "vertical",
+              "gap": 4,
+              "children": [
+                {
+                  "type": "text",
+                  "id": "ATYci",
+                  "name": "Session Title",
+                  "fill": "$--color-foreground-default",
+                  "content": "Today's Workout",
+                  "fontFamily": "Inter",
+                  "fontSize": 28,
+                  "fontWeight": "600",
+                  "letterSpacing": -0.5
+                },
+                {
+                  "type": "text",
+                  "id": "XiAXZ",
+                  "name": "Session Subtitle",
+                  "fill": "$--color-foreground-muted",
+                  "content": "Feb 13, 2025",
+                  "fontFamily": "Inter",
+                  "fontSize": 14,
+                  "fontWeight": "normal"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "id": "DRkIO",
+              "name": "Session Label",
+              "fill": "$--color-foreground-muted",
+              "content": "EXERCISES IN THIS SESSION",
+              "fontFamily": "Inter",
+              "fontSize": 12,
+              "fontWeight": "600",
+              "letterSpacing": 1
+            },
+            {
+              "type": "frame",
+              "id": "I9hMB",
+              "name": "Session Card",
+              "clip": true,
+              "width": "fill_container",
+              "cornerRadius": 16,
+              "stroke": {
+                "align": "inside",
+                "thickness": 1.5,
+                "fill": "$--color-border-default"
+              },
+              "layout": "vertical",
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "vsiDO",
+                  "name": "Session Item 1",
+                  "width": "fill_container",
+                  "layout": "vertical",
+                  "gap": 12,
+                  "padding": 16,
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "XiS1y",
+                      "name": "Session 1 Row",
+                      "width": "fill_container",
+                      "gap": 14,
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "icon_font",
+                          "id": "RkuWw",
+                          "name": "Session 1 Icon",
+                          "width": 24,
+                          "height": 24,
+                          "iconFontName": "dumbbell",
+                          "iconFontFamily": "lucide",
+                          "fill": "$--color-background-inverse"
+                        },
+                        {
+                          "type": "frame",
+                          "id": "dae3f",
+                          "name": "Session 1 Info",
+                          "width": "fill_container",
+                          "layout": "vertical",
+                          "gap": 2,
+                          "children": [
+                            {
+                              "type": "text",
+                              "id": "FU5b5",
+                              "name": "Session 1 Name",
+                              "fill": "$--color-foreground-default",
+                              "content": "Bench Press",
+                              "fontFamily": "Inter",
+                              "fontSize": 15,
+                              "fontWeight": "500"
+                            },
+                            {
+                              "type": "text",
+                              "id": "ydNLl",
+                              "name": "Session 1 Sets",
+                              "fill": "$--color-foreground-muted",
+                              "content": "3 × 8 @ 60 kg",
+                              "fontFamily": "Inter",
+                              "fontSize": 13,
+                              "fontWeight": "normal"
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "rectangle",
+                  "id": "tgZD2",
+                  "name": "Session Divider 1",
+                  "fill": "$--color-border-default",
+                  "width": "fill_container",
+                  "height": 1
+                },
+                {
+                  "type": "frame",
+                  "id": "rF3IG",
+                  "name": "Session Item 2",
+                  "width": "fill_container",
+                  "layout": "vertical",
+                  "gap": 12,
+                  "padding": 16,
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "FI8zH",
+                      "name": "Session 2 Row",
+                      "width": "fill_container",
+                      "gap": 14,
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "icon_font",
+                          "id": "IEfHZ",
+                          "name": "Session 2 Icon",
+                          "width": 24,
+                          "height": 24,
+                          "iconFontName": "dumbbell",
+                          "iconFontFamily": "lucide",
+                          "fill": "$--color-background-inverse"
+                        },
+                        {
+                          "type": "frame",
+                          "id": "J7fo0",
+                          "name": "Session 2 Info",
+                          "width": "fill_container",
+                          "layout": "vertical",
+                          "gap": 2,
+                          "children": [
+                            {
+                              "type": "text",
+                              "id": "NrHoo",
+                              "name": "Session 2 Name",
+                              "fill": "$--color-foreground-default",
+                              "content": "Squat",
+                              "fontFamily": "Inter",
+                              "fontSize": 15,
+                              "fontWeight": "500"
+                            },
+                            {
+                              "type": "text",
+                              "id": "kuGvW",
+                              "name": "Session 2 Sets",
+                              "fill": "$--color-foreground-muted",
+                              "content": "4 × 5 @ 100 kg",
+                              "fontFamily": "Inter",
+                              "fontSize": 13,
+                              "fontWeight": "normal"
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "rectangle",
+                  "id": "8qEQn",
+                  "name": "Session Divider 2",
+                  "fill": "$--color-border-default",
+                  "width": "fill_container",
+                  "height": 1
+                },
+                {
+                  "type": "frame",
+                  "id": "gXpBP",
+                  "name": "Session Item 3",
+                  "width": "fill_container",
+                  "layout": "vertical",
+                  "gap": 12,
+                  "padding": 16,
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "oWuUA",
+                      "name": "Session 3 Row",
+                      "width": "fill_container",
+                      "gap": 14,
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "icon_font",
+                          "id": "GxzVG",
+                          "name": "Session 3 Icon",
+                          "width": 24,
+                          "height": 24,
+                          "iconFontName": "dumbbell",
+                          "iconFontFamily": "lucide",
+                          "fill": "$--color-background-inverse"
+                        },
+                        {
+                          "type": "frame",
+                          "id": "gtGHs",
+                          "name": "Session 3 Info",
+                          "width": "fill_container",
+                          "layout": "vertical",
+                          "gap": 2,
+                          "children": [
+                            {
+                              "type": "text",
+                              "id": "2Y8xb",
+                              "name": "Session 3 Name",
+                              "fill": "$--color-foreground-default",
+                              "content": "Deadlift",
+                              "fontFamily": "Inter",
+                              "fontSize": 15,
+                              "fontWeight": "500"
+                            },
+                            {
+                              "type": "text",
+                              "id": "Aubat",
+                              "name": "Session 3 Sets",
+                              "fill": "$--color-foreground-muted",
+                              "content": "3 × 5 @ 120 kg",
+                              "fontFamily": "Inter",
+                              "fontSize": 13,
+                              "fontWeight": "normal"
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "FYEoQ",
+              "name": "Session Add Section",
+              "width": "fill_container",
+              "justifyContent": "center",
+              "children": [
+                {
+                  "id": "1uCYG",
+                  "type": "ref",
+                  "ref": "ssW87",
+                  "x": 0,
+                  "context": "",
+                  "y": 0,
+                  "width": "fill_container",
+                  "descendants": {
+                    "tqOZX": {
+                      "enabled": false
+                    }
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "TZgPL",
+          "type": "ref",
+          "ref": "aq9eP",
+          "x": 0,
+          "y": 460,
+          "flipX": false,
+          "flipY": false,
+          "width": "fill_container",
+          "height": "fit_content"
+        }
+      ]
+    },
+    {
+      "type": "frame",
+      "id": "ssW87",
+      "x": -200,
+      "y": 0,
+      "name": "Button",
+      "reusable": true,
+      "fill": "$--color-background-inverse",
+      "cornerRadius": 8,
+      "gap": 8,
+      "padding": [
+        8,
+        16
+      ],
+      "justifyContent": "center",
+      "alignItems": "center",
+      "children": [
+        {
+          "type": "icon_font",
+          "id": "tqOZX",
+          "name": "Icon",
+          "width": 16,
+          "height": 16,
+          "iconFontName": "plus",
+          "iconFontFamily": "lucide",
+          "fill": "$--color-foreground-inverse"
+        },
+        {
+          "type": "text",
+          "id": "qyLxv",
+          "name": "Label",
+          "fill": "$--color-foreground-inverse",
+          "content": "Button",
+          "lineHeight": "$--font-leading-large",
+          "fontFamily": "Inter",
+          "fontSize": "$--font-body-large",
+          "fontWeight": "600"
+        }
+      ]
+    }
+  ],
+  "variables": {
+    "--color-background-default": {
+      "type": "color",
+      "value": "#FFFFFF"
+    },
+    "--color-border-default": {
+      "type": "color",
+      "value": "#E4E4E7"
+    },
+    "--font-family": {
+      "type": "string",
+      "value": "Inter"
+    },
+    "--color-foreground-default": {
+      "type": "color",
+      "value": "#18181b"
+    },
+    "--color-foreground-muted": {
+      "type": "color",
+      "value": "#71717A"
+    },
+    "--color-background-inverse": {
+      "type": "color",
+      "value": "#27272a"
+    },
+    "--color-foreground-inverse": {
+      "type": "color",
+      "value": [
+        {
+          "value": "#EFF6FF"
+        },
+        {
+          "value": "#F4F4F5"
+        }
+      ]
+    },
+    "--font-body-medium": {
+      "type": "number",
+      "value": 14
+    },
+    "--font-body-large": {
+      "type": "number",
+      "value": 16
+    },
+    "--font-leading-large": {
+      "type": "number",
+      "value": 1.5
+    }
+  }
+}
