@@ -1,0 +1,157 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+@import "shadcn/tailwind.css";
+
+:root {
+  ::selection {
+    background: color-mix(
+      in oklch,
+      var(--color-foreground-neutral-default) 20%,
+      transparent
+    );
+  }
+}
+
+@layer color {
+  :root {
+    --color-gray-50: oklch(0.98 0.002 80);
+    --color-gray-100: oklch(0.96 0.003 80);
+    --color-gray-200: oklch(0.92 0.004 80);
+    --color-gray-300: oklch(0.88 0.006 80);
+    --color-gray-400: oklch(0.64 0.008 80);
+    --color-gray-500: oklch(0.48 0.01 80);
+    --color-gray-600: oklch(0.32 0.01 80);
+    --color-gray-700: oklch(0.28 0.008 80);
+    --color-gray-800: oklch(0.2 0.006 80);
+    --color-gray-900: oklch(0.16 0.003 80);
+    --color-gray-950: oklch(0.08 0.002 80);
+    --color-white: oklch(1 0 0);
+    --color-black: oklch(0 0 0);
+  }
+
+  @media (prefers-color-scheme: dark) {
+    :root {
+      color-scheme: dark;
+      --color-background-neutral-default: var(--color-gray-950);
+      --color-background-neutral-faded: var(--color-gray-900);
+      --color-background-neutral-subtle: var(--color-gray-800);
+      --color-background-neutral-strong: var(--color-gray-700);
+      --color-background-neutral-inverse: var(--color-white);
+      --color-foreground-neutral-default: var(--color-gray-50);
+      --color-foreground-neutral-faded: var(--color-gray-400);
+      --color-foreground-neutral-subtle: var(--color-gray-300);
+      --color-foreground-neutral-strong: var(--color-gray-100);
+      --color-foreground-neutral-inverse: var(--color-gray-900);
+      --color-border-neutral-default: var(--color-gray-600);
+      --color-border-neutral-faded: var(--color-gray-800);
+      --color-border-neutral-subtle: var(--color-gray-700);
+      --color-border-neutral-strong: var(--color-gray-500);
+    }
+  }
+
+  @media (prefers-color-scheme: light) {
+    :root {
+      color-scheme: light;
+      --color-background-neutral-default: var(--color-white);
+      --color-background-neutral-faded: var(--color-gray-50);
+      --color-background-neutral-subtle: var(--color-gray-100);
+      --color-background-neutral-strong: var(--color-gray-300);
+      --color-background-neutral-inverse: var(--color-gray-950);
+      --color-foreground-neutral-default: var(--color-gray-900);
+      --color-foreground-neutral-faded: var(--color-gray-600);
+      --color-foreground-neutral-subtle: var(--color-gray-700);
+      --color-foreground-neutral-strong: var(--color-gray-800);
+      --color-foreground-neutral-inverse: var(--color-white);
+      --color-border-neutral-default: var(--color-gray-300);
+      --color-border-neutral-faded: var(--color-gray-100);
+      --color-border-neutral-subtle: var(--color-gray-200);
+      --color-border-neutral-strong: var(--color-gray-400);
+    }
+  }
+}
+
+@theme inline {
+  --breakpoint-*: initial;
+  --breakpoint-sm: 480px;
+  --breakpoint-md: 640px;
+  --breakpoint-lg: 960px;
+  --breakpoint-xl: 1280px;
+
+  --color-transparent: transparent;
+  --color-background-neutral-default: var(--color-background-neutral-default);
+  --color-background-neutral-faded: var(--color-background-neutral-faded);
+  --color-background-neutral-subtle: var(--color-background-neutral-subtle);
+  --color-background-neutral-strong: var(--color-background-neutral-strong);
+  --color-background-neutral-inverse: var(--color-background-neutral-inverse);
+  --color-foreground-neutral-default: var(--color-foreground-neutral-default);
+  --color-foreground-neutral-faded: var(--color-foreground-neutral-faded);
+  --color-foreground-neutral-subtle: var(--color-foreground-neutral-subtle);
+  --color-foreground-neutral-strong: var(--color-foreground-neutral-strong);
+  --color-foreground-neutral-inverse: var(--color-foreground-neutral-inverse);
+  --color-border-neutral-default: var(--color-border-neutral-default);
+  --color-border-neutral-faded: var(--color-border-neutral-faded);
+  --color-border-neutral-subtle: var(--color-border-neutral-subtle);
+  --color-border-neutral-strong: var(--color-border-neutral-strong);
+
+  --font-sans: var(--font-sans);
+  --font-mono: var(--font-mono);
+
+  --radius: 0.75rem;
+  --radius-sm: calc(var(--radius) * 0.6);
+  --radius-md: calc(var(--radius) * 0.8);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) * 1.4);
+  --radius-2xl: calc(var(--radius) * 1.8);
+  --radius-3xl: calc(var(--radius) * 2.2);
+  --radius-4xl: calc(var(--radius) * 2.6);
+
+  --text-*: initial;
+  --text-body-small-default: 12px;
+  --text-body-small-default--line-height: 16px;
+  --text-body-small-default--font-weight: 400;
+  --text-body-small-subtle: 12px;
+  --text-body-small-subtle--line-height: 16px;
+  --text-body-small-subtle--font-weight: 500;
+  --text-body-medium-default: 14px;
+  --text-body-medium-default--line-height: 20px;
+  --text-body-medium-default--font-weight: 400;
+  --text-body-medium-subtle: 14px;
+  --text-body-medium-subtle--line-height: 20px;
+  --text-body-medium-subtle--font-weight: 500;
+  --text-body-medium-strong: 14px;
+  --text-body-medium-strong--line-height: 20px;
+  --text-body-medium-strong--font-weight: 600;
+  --text-body-large-default: 16px;
+  --text-body-large-default--line-height: 26px;
+  --text-body-large-default--font-weight: 400;
+  --text-body-large-subtle: 16px;
+  --text-body-large-subtle--line-height: 24px;
+  --text-body-large-subtle--font-weight: 500;
+  --text-body-large-strong: 16px;
+  --text-body-large-strong--line-height: 24px;
+  --text-body-large-strong--font-weight: 600;
+  --text-title-small-strong: 18px;
+  --text-title-small-strong--line-height: 26px;
+  --text-title-small-strong--font-weight: 600;
+  --text-title-small-strong--letter-spacing: -0.02em;
+  --text-title-medium-strong: 20px;
+  --text-title-medium-strong--line-height: 28px;
+  --text-title-medium-strong--font-weight: 600;
+  --text-title-medium-strong--letter-spacing: -0.02em;
+  --text-title-large-strong: 24px;
+  --text-title-large-strong--line-height: 32px;
+  --text-title-large-strong--font-weight: 600;
+  --text-title-large-strong--letter-spacing: -0.02em;
+  --text-display-small-strong: 32px;
+  --text-display-small-strong--line-height: 40px;
+  --text-display-small-strong--font-weight: 600;
+  --text-display-small-strong--letter-spacing: -0.03em;
+  --text-display-medium-strong: 40px;
+  --text-display-medium-strong--line-height: 48px;
+  --text-display-medium-strong--font-weight: 600;
+  --text-display-medium-strong--letter-spacing: -0.03em;
+  --text-display-large-strong: 48px;
+  --text-display-large-strong--line-height: 56px;
+  --text-display-large-strong--font-weight: 600;
+  --text-display-large-strong--letter-spacing: -0.03em;
+}
