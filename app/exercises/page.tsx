@@ -16,9 +16,9 @@ import {
   SelectTrigger,
   SelectValue,
 } from "@/components/ui/select";
-import { createExercise, getExercises } from "@/lib/queries";
+import { createMovement, getMovements } from "@/lib/queries";
 import { cn } from "@/lib/utils";
-import type { Exercise, ExerciseArea, ExerciseType } from "@/types/database";
+import type { ExerciseArea, ExerciseType, Movement } from "@/types/database";
 import { Plus, Search } from "lucide-react";
 import Link from "next/link";
 import { useCallback, useEffect, useState } from "react";
@@ -36,7 +36,7 @@ type FilterArea = ExerciseArea | "all";
 type FilterType = ExerciseType | "all";
 
 export default function ExercisesPage() {
-  const [exercises, setExercises] = useState<Exercise[]>([]);
+  const [exercises, setExercises] = useState<Movement[]>([]);
   const [search, setSearch] = useState("");
   const [filterArea, setFilterArea] = useState<FilterArea>("all");
   const [filterType, setFilterType] = useState<FilterType>("all");
@@ -52,7 +52,7 @@ export default function ExercisesPage() {
   const load = useCallback(async () => {
     setLoading(true);
     try {
-      const data = await getExercises({
+      const data = await getMovements({
         area: filterArea !== "all" ? filterArea : undefined,
         type: filterType !== "all" ? filterType : undefined,
         search: search || undefined,
@@ -72,7 +72,7 @@ export default function ExercisesPage() {
     if (!newName.trim()) return;
     setCreating(true);
     try {
-      await createExercise({
+      await createMovement({
         name: newName.trim(),
         area: newArea,
         type: newType,
@@ -237,7 +237,7 @@ export default function ExercisesPage() {
           {exercises.map((exercise) => (
             <Link
               key={exercise.id}
-              href={`/exercises/${exercise.id}`}
+              href={`/movements/${exercise.id}`}
               className="flex items-center justify-between px-4 py-3 rounded-2xl bg-background-neutral-subtle hover:bg-background-neutral-strong transition-colors"
             >
               <div>
