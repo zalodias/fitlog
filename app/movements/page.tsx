@@ -19,7 +19,7 @@ import {
 } from "@/components/ui/select";
 import { createMovement, getMovements } from "@/lib/queries";
 import { cn } from "@/lib/utils";
-import type { Movement, ExerciseArea, ExerciseType } from "@/types/database";
+import type { Movement, ExerciseArea, ExerciseType, Metric } from "@/types/database";
 import { Plus, Search } from "lucide-react";
 import Link from "next/link";
 import { useCallback, useEffect, useState } from "react";
@@ -44,10 +44,26 @@ export default function MovementsPage() {
   const [loading, setLoading] = useState(true);
   const [dialogOpen, setDialogOpen] = useState(false);
 
+  const ALL_METRICS: Metric[] = ["reps", "weight", "distance", "calories", "duration"];
+  const METRIC_LABELS: Record<Metric, string> = {
+    reps: "Reps",
+    weight: "Weight",
+    distance: "Distance",
+    calories: "Calories",
+    duration: "Duration",
+  };
+
   const [newName, setNewName] = useState("");
   const [newArea, setNewArea] = useState<ExerciseArea>("full");
   const [newType, setNewType] = useState<ExerciseType>("strength");
+  const [newMetrics, setNewMetrics] = useState<Metric[]>([]);
   const [creating, setCreating] = useState(false);
+
+  function toggleMetric(metric: Metric) {
+    setNewMetrics((prev) =>
+      prev.includes(metric) ? prev.filter((m) => m !== metric) : [...prev, metric],
+    );
+  }
 
   const load = useCallback(async () => {
     setLoading(true);
@@ -69,18 +85,20 @@ export default function MovementsPage() {
   }, [load]);
 
   async function handleCreate() {
-    if (!newName.trim()) return;
+    if (!newName.trim() || newMetrics.length === 0) return;
     setCreating(true);
     try {
       await createMovement({
         name: newName.trim(),
         area: newArea,
         type: newType,
+        metrics: newMetrics,
       });
       setDialogOpen(false);
       setNewName("");
       setNewArea("full");
       setNewType("strength");
+      setNewMetrics([]);
       load();
     } finally {
       setCreating(false);
@@ -110,6 +128,35 @@ export default function MovementsPage() {
                   onKeyDown={(e) => e.key === "Enter" && handleCreate()}
                 />
               </div>
+              <div className="space-y-1.5">
+                <Label>Metrics</Label>
+                <div className="flex flex-wrap gap-2">
+                  {ALL_METRICS.map((metric) => {
+                    const active = newMetrics.includes(metric);
+                    return (
+                      <button
+                        key={metric}
+                        type="button"
+                        onClick={() => toggleMetric(metric)}
+                        className={cn(
+                          "px-3 py-1.5 rounded-xl text-body-small-strong transition-colors border",
+                          active
+                            ? "bg-background-neutral-strong border-border-neutral-strong text-foreground-neutral-default"
+                            : "bg-background-neutral-subtle border-border-neutral-default text-foreground-neutral-faded hover:border-border-neutral-strong hover:text-foreground-neutral-default",
+                        )}
+                      >
+                        {METRIC_LABELS[metric]}
+                      </button>
+                    );
+                  })}
+                </div>
+                {newMetrics.length === 0 && (
+                  <p className="text-body-small-default text-foreground-neutral-faded">
+                    Select at least one metric
+                  </p>
+                )}
+              </div>
+
               <div className="grid grid-cols-2 gap-4">
                 <div className="space-y-1.5">
                   <Label>Area</Label>
@@ -147,7 +194,7 @@ export default function MovementsPage() {
               <Button
                 className="w-full"
                 onClick={handleCreate}
-                disabled={creating || !newName.trim()}
+                disabled={creating || !newName.trim() || newMetrics.length === 0}
               >
                 {creating ? "Creating…" : "Create Movement"}
               </Button>
