@@ -1,9 +1,10 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import { ChevronLeft, ChevronRight, Dumbbell, Zap, Layers } from "lucide-react";
+import { ChevronLeft, ChevronRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { getSessions, getSession } from "@/lib/queries";
+import { deriveSessionIcon, deriveSessionLabel } from "@/lib/session";
 import type { Session, SessionWithBlocks } from "@/types/database";
 import {
   format,
@@ -17,12 +18,6 @@ import {
   isToday,
 } from "date-fns";
 import { cn } from "@/lib/utils";
-
-const SESSION_TYPE_ICONS = {
-  strength: Dumbbell,
-  workout: Zap,
-  mixed: Layers,
-};
 
 const SESSION_TYPE_COLORS = "bg-foreground-neutral-default";
 
@@ -188,7 +183,9 @@ export default function CalendarPage() {
       {selectedDate && (
         <div className="bg-background-neutral-subtle rounded-2xl overflow-hidden">
           <div className="px-4 py-3 border-b border-border-neutral-default">
-            <p className="text-body-large-strong">{format(selectedDate, "EEEE, MMMM d")}</p>
+            <p className="text-body-large-strong">
+              {format(selectedDate, "EEEE, MMMM d")}
+            </p>
           </div>
 
           {!selectedDaySession ? (
@@ -205,16 +202,12 @@ export default function CalendarPage() {
               {/* Session type badge */}
               <div className="px-4 py-3 flex items-center gap-2">
                 {(() => {
-                  const Icon = SESSION_TYPE_ICONS[selectedSession.type];
+                  const Icon = deriveSessionIcon(selectedSession);
                   return (
                     <>
                       <Icon className="size-4 text-foreground-neutral-faded" />
                       <span className="text-body-medium-strong capitalize">
-                        {selectedSession.type === "mixed"
-                          ? "Strength + Workout"
-                          : selectedSession.type === "workout"
-                            ? "Workout"
-                            : "Strength"}
+                        {deriveSessionLabel(selectedSession)}
                       </span>
                     </>
                   );
