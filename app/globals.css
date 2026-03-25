@@ -1,6 +1,4 @@
 @import "tailwindcss";
-@import "tw-animate-css";
-@import "shadcn/tailwind.css";
 
 :root {
   ::selection {
@@ -25,6 +23,8 @@
     --color-gray-800: oklch(0.2 0.006 80);
     --color-gray-900: oklch(0.16 0.003 80);
     --color-gray-950: oklch(0.08 0.002 80);
+    --color-orange-400: oklch(0.88 0.4 80);
+    --color-orange-500: oklch(0.8 0.4 80);
     --color-white: oklch(1 0 0);
     --color-black: oklch(0 0 0);
   }
@@ -37,11 +37,13 @@
       --color-background-neutral-subtle: var(--color-gray-800);
       --color-background-neutral-strong: var(--color-gray-700);
       --color-background-neutral-inverse: var(--color-white);
+      --color-background-brand-default: var(--color-orange-400);
       --color-foreground-neutral-default: var(--color-gray-50);
       --color-foreground-neutral-faded: var(--color-gray-400);
       --color-foreground-neutral-subtle: var(--color-gray-300);
       --color-foreground-neutral-strong: var(--color-gray-100);
       --color-foreground-neutral-inverse: var(--color-gray-900);
+      --color-foreground-brand-default: var(--color-orange-500);
       --color-border-neutral-default: var(--color-gray-600);
       --color-border-neutral-faded: var(--color-gray-800);
       --color-border-neutral-subtle: var(--color-gray-700);
@@ -57,11 +59,13 @@
       --color-background-neutral-subtle: var(--color-gray-100);
       --color-background-neutral-strong: var(--color-gray-300);
       --color-background-neutral-inverse: var(--color-gray-950);
+      --color-background-brand-default: var(--color-orange-500);
       --color-foreground-neutral-default: var(--color-gray-900);
       --color-foreground-neutral-faded: var(--color-gray-600);
       --color-foreground-neutral-subtle: var(--color-gray-700);
       --color-foreground-neutral-strong: var(--color-gray-800);
       --color-foreground-neutral-inverse: var(--color-white);
+      --color-foreground-brand-default: var(--color-orange-500);
       --color-border-neutral-default: var(--color-gray-300);
       --color-border-neutral-faded: var(--color-gray-100);
       --color-border-neutral-subtle: var(--color-gray-200);
@@ -92,6 +96,8 @@
   --color-border-neutral-faded: var(--color-border-neutral-faded);
   --color-border-neutral-subtle: var(--color-border-neutral-subtle);
   --color-border-neutral-strong: var(--color-border-neutral-strong);
+  --color-background-brand-default: var(--color-background-brand-default);
+  --color-foreground-brand-default: var(--color-foreground-brand-default);
 
   --font-sans: var(--font-sans);
   --font-mono: var(--font-mono);
