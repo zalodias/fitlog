@@ -1,12 +1,13 @@
-import { supabase } from "./supabase";
+import { supabase } from "./supabase"
 import type {
   Movement,
   ExerciseArea,
   ExerciseType,
+  Metric,
   Session,
   SessionWithBlocks,
   PersonalRecord,
-} from "@/types/database";
+} from "@/types/database"
 
 // ── Movements ───────────────────────────────────────────────────────────────
 
@@ -37,15 +38,15 @@ export async function getMovement(id: string): Promise<Movement | null> {
 }
 
 export async function createMovement(
-  movement: Pick<Movement, "name" | "area" | "type">,
+  movement: Pick<Movement, "name" | "area" | "type" | "metrics">,
 ): Promise<Movement> {
   const { data, error } = await supabase
     .from("movements")
     .insert({ ...movement, custom: true })
     .select()
-    .single();
-  if (error) throw error;
-  return data;
+    .single()
+  if (error) throw error
+  return data
 }
 
 // ── Sessions ───────────────────────────────────────────────────────────────
@@ -117,18 +118,26 @@ export async function getSession(
   return data;
 }
 
-export async function getRecentSessions(limit = 5): Promise<Session[]> {
+export async function getRecentSessions(
+  limit = 5,
+): Promise<SessionWithBlocks[]> {
   const { data, error } = await supabase
     .from("sessions")
-    .select("*")
+    .select(
+      `
+      *,
+      exercises (id),
+      workouts (id)
+    `,
+    )
     .order("date", { ascending: false })
     .limit(limit);
   if (error) throw error;
-  return data ?? [];
+  return (data ?? []) as SessionWithBlocks[];
 }
 
 export async function createSession(
-  session: Pick<Session, "date" | "type">,
+  session: Pick<Session, "date">,
 ): Promise<Session> {
   const { data, error } = await supabase
     .from("sessions")
@@ -168,13 +177,15 @@ export async function deleteExercise(id: string): Promise<void> {
 // ── Sets ───────────────────────────────────────────────────────────────────
 
 export async function upsertSet(set: {
-  id?: string;
-  exercise_id: string;
-  number: number;
-  reps?: number | null;
-  weight?: number | null;
-  duration?: number | null;
-  effort?: number | null;
+  id?: string
+  exercise_id: string
+  number: number
+  reps?: number | null
+  weight?: number | null
+  duration?: number | null
+  distance?: number | null
+  calories?: number | null
+  effort?: number | null
 }) {
   if (set.id) {
     const { data, error } = await supabase
@@ -301,12 +312,14 @@ export async function deleteWorkout(id: string): Promise<void> {
 }
 
 export async function createWorkoutMovement(we: {
-  workout_id: string;
-  movement_id: string;
-  reps?: number | null;
-  weight?: number | null;
-  distance?: number | null;
-  position: number;
+  workout_id: string
+  movement_id: string
+  reps?: number | null
+  weight?: number | null
+  distance?: number | null
+  duration?: number | null
+  calories?: number | null
+  position: number
 }) {
   const { data, error } = await supabase
     .from("workout_movements")
@@ -399,7 +412,7 @@ export async function getTopPRs(limit = 10): Promise<PersonalRecord[]> {
   const { data: movements } = await supabase
     .from("movements")
     .select("id, name")
-    .eq("type", "strength");
+    .contains("metrics", ["weight"] as Metric[])
 
   if (!movements) return [];
 
